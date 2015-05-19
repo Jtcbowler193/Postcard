@@ -58,6 +58,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-q5-m8z">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="206" y="140" width="100" height="100"/>
+                                </variation>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y0B-Vm-hr2">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -97,30 +103,46 @@
                                     <rect key="frame" x="32" y="77" width="274" height="55"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-q5-m8z">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YY3-OP-37T">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="206" y="140" width="100" height="100"/>
+                                    <rect key="frame" x="32" y="148" width="166" height="48"/>
                                 </variation>
-                            </imageView>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDb-bp-PpY">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="32" y="148" width="166" height="48"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="g0n-q5-m8z"/>
                                 <exclude reference="Y0B-Vm-hr2"/>
                                 <exclude reference="cUO-UQ-lGW"/>
                                 <exclude reference="TXm-wG-kFn"/>
                                 <exclude reference="PG8-jB-YZ7"/>
-                                <exclude reference="g0n-q5-m8z"/>
+                                <exclude reference="YY3-OP-37T"/>
+                                <exclude reference="nDb-bp-PpY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="g0n-q5-m8z"/>
                                 <include reference="Y0B-Vm-hr2"/>
                                 <include reference="cUO-UQ-lGW"/>
                                 <include reference="TXm-wG-kFn"/>
                                 <include reference="PG8-jB-YZ7"/>
-                                <include reference="g0n-q5-m8z"/>
+                                <include reference="YY3-OP-37T"/>
+                                <include reference="nDb-bp-PpY"/>
                             </mask>
                         </variation>
                     </view>
@@ -129,6 +151,7 @@
                         <outlet property="enterNameTextField" destination="Y0B-Vm-hr2" id="Odz-a4-LvB"/>
                         <outlet property="mailButton" destination="TXm-wG-kFn" id="gtV-DX-H1P"/>
                         <outlet property="messageLabel" destination="PG8-jB-YZ7" id="l1C-Nw-DpI"/>
+                        <outlet property="nameLabel" destination="nDb-bp-PpY" id="lfl-JP-5gg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
